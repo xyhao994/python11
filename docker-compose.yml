@@ -11,11 +11,11 @@ services:
       - '80:80'
 
   web-front:
-  build:
-    context: ./WEB
-    dockerfile: dev.Dockerfile
-  restart: always
-  volumes:
-    - ./WEB/html:usr/local/apache2/htdocs
-  ports:
-    - '8080:80'
+    build:
+      context: ./WEB
+      dockerfile: dev.Dockerfile
+    restart: always
+    volumes:
+      - ./WEB/html:usr/local/apache2/htdocs
+    ports:
+      - '8080:80'
